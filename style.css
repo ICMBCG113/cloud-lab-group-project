@@ -35,13 +35,18 @@ nav a {
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
-
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: background 0.25s ease, backdrop-filter 0.25s ease;
   /* APPLE-STYLE TRANSITION */
   transition: opacity 0.25s ease; /* [TRANSITION 1] Nav link hover fade */
 }
 
 nav a:hover {
-  opacity: 0.7; /* subtle fade instead of harsh colour swap */
+  opacity: 2.0; /* subtle fade instead of harsh colour swap */
+  backdrop-filter: Blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* HERO SECTION */
