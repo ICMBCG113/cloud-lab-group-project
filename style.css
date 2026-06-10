@@ -1,0 +1,261 @@
+
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #461312; /* dark indigo for readable body text */
+}
+
+/* --- HEADER */
+header {
+  background-color: #461312;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo/site title in header */
+header .logo {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* --- NAV LINKS */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+
+  /* APPLE-STYLE TRANSITION */
+  transition: opacity 0.25s ease; /* [TRANSITION 1] Nav link hover fade */
+}
+
+nav a:hover {
+  opacity: 0.7; /* subtle fade instead of harsh colour swap */
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #461312;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+/*CTA BUTTON */
+.btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #461312;
+  padding: 0.75rem 2rem;
+  border-radius: 50px; /* pill shape — modern and clean */
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+ transition: transform 0.2s ease, box-shadow: 0.2s ease
+}
+
+.btn:hover {
+  transform: translateY(-4px);          /* slight lift */
+  box-shadow: 0 8px 20px #080808; /* indigo glow shadow */
+}
+
+/* --- SECTION (general content wrapper)
+   Used on all pages for consistent padding and max width */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #461312; /* indigo heading to reinforce brand colour */
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #461312;
+  padding-bottom: 0.5rem;
+}
+
+.section p,
+.section li {
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+}
+
+/* --- CARDS
+   Used on index.html to display group member names
+   Flex row of white cards with indigo accent border */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #461312;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  flex: 1 1 180px; /* responsive: wraps on small screens */
+  text-align: center;
+  font-weight: 600;
+  color: #461312;
+
+  /*  APPLE-STYLE TRANSITION */
+  transition: background-color 0.2s ease, color 0.2s ease; /* [TRANSITION 3] Card colour swap */
+  transform: translateY(-4px); 
+}
+
+.card:hover {
+  background-color: #461312; 
+  color: #ffffff; 
+  transform: translateY(-7px); 
+  box-shadow: 0 8px 20px #080808; 
+}
+
+/* --- IMAGE STYLING */
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px #080808;
+
+  /* APPLE-STYLE TRANSITION  */
+  transition: transform 0.3s ease; /* [TRANSITION 4] Image zoom on hover */
+}
+
+.project-img:hover {
+  transform: scale(1.02);
+}
+
+/* --- CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* label + input grouped together */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #461312;
+}
+
+/* Input and textarea share same style */
+.form-group input,
+.form-group textarea {
+  padding: 0.7rem 1rem;
+  border: 2px solid #ffffff; 
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+
+  /*APPLE-STYLE TRANSITION */
+  transition: border-color 0.2s ease; /* [TRANSITION 5] Input focus highlight */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #461312; /* deepens to full indigo when active */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #461312;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 0%;
+  font-size: 0.9rem;
+}
+.fct {
+  margin-top: 17.3rem;
+}
+/* ABOUT PAGE: Team section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Each team member block */
+.team-member {
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+
+  /*APPLE-STYLE TRANSITION */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* [TRANSITION 6] Team card hover */
+}
+
+.team-member:hover {
+  border-color: #431312; /* deepens border on hover */
+  box-shadow: 0 8px 16px #ffffff(79, 70, 229, 0.15);
+  transform: translateY(-3px);
+}
+
+.team-member h3 {
+  color: #461312;
+  margin-bottom: 0.3rem;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #461312; /* neutral grey for role label */
+}
+/* image positioning */
+.img-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.img-row .project-img {
+  width: 45%;
+  max-width: 100%;
+}

@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 11 cloud Computing Project</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- HEADER: shared across all pages for consistent navigation -->
+    <header>
+      <a href="index.html" class="logo">Cloud Computing Project</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO: HTML5 <section> used here as a landmark region for the banner -->
+    <section class="hero">
+      <h1>Welcome to Group 11's Website</h1>
+      <p>Cloud Computing · Web Development · Collaborative Work</p>
+      <!-- Button links down to the about section on this page -->
+      <a href="about.html" class="btn">Meet The Team Behind The Scenes</a>
+    </section>
+
+    <!-- MAIN: HTML5 <main> wraps the primary page content -->
+    <main>
+
+      <!-- Project description section -->
+      <article class="section">
+        <!-- <article> used because this is a standalone piece of content
+             that makes sense on its own (project description) -->
+        <h2>Introduction</h2>
+        <p>
+          This website is built as part of our Cloud Computing assignment.
+          Our goal is to design and deploy a simple static website using
+          HTML, CSS and JavaScript then host it live using GitHub Pages.
+        </p>
+        <p>
+          <strong>Course:</strong> Cloud Computing 
+        </p>
+      </article>
+
+      <!-- Project image section — satisfies the "at least one image" requirement -->
+      <section class="section">
+        <h2>Sample Images</h2>
+        <!-- Replace src with your actual image path inside the images/ folder -->
+        <div class = "img-row">
+        <img
+          src="image.jpg"
+          alt="Group project screenshot"
+          class="project-img"
+        />
+        <img
+          src="image2.jpg"
+          alt="Group project screenshot2"
+          class="project-img"
+        />
+        <img
+          src="image3.jpg"
+          alt="Group project screenshot3"
+          class="project-img"
+        />
+        </div>
+      </section>
+
+      <!-- Group members displayed as cards -->
+      <section class="section">
+        <h2>Our Team</h2>
+        <div class="cards">
+          <!-- Each card is a group member — add/remove cards as needed -->
+          <div class="card">Member One<br><small>Group Leader</small></div>
+          <div class="card">Member Two<br><small>Repository Manager</small></div>
+          <div class="card">Member Three<br><small>Designer</small></div>
+          <div class="card">Member Four<br><small>Designer</small></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER: HTML5 <footer> element -->
+    <footer>
+      <p>&copy; 2026 Group 11 · Cloud Computing Project</p>
+    </footer>
+
+    <!--
+         INLINE SCRIPT
+         Adds a live greeting based on time of day.
+         Runs after the page loads (script is at bottom). -->
+    <script>
+      // Get the current hour (0–23)
+      const hour = new Date().getHours();
+
+      // Determine greeting based on time of day
+      let greeting;
+      if (hour < 12) {
+        greeting = "Good morning";
+      } else if (hour < 17) {
+        greeting = "Good afternoon";
+      } else {
+        greeting = "Good evening";
+      }
+      // Find the hero heading and prepend the greeting
+      const heroHeading = document.querySelector(".hero h1");
+      if (heroHeading) {
+        heroHeading.textContent = greeting + " - " + heroHeading.textContent;
+      }
+    </script>
+  </body>
+</html>
